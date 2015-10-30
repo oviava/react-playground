@@ -5,13 +5,11 @@ import {reduxReactRouter} from 'redux-router';
 
 // TODO: remove devtools and logging middleware in prod
 import DevTools from '../dev/DevTools';
-// import logger from '../loggerMiddleware';
 
 import rootReducer from '../reducers';
 
 const createAppStore = compose(
   reduxReactRouter({createHistory: createHashHistory}),
-  // applyMiddleware(thunkMiddleware, logger),
   applyMiddleware(thunkMiddleware),
   // TODO: remove devtools in prod
   DevTools.instrument()
