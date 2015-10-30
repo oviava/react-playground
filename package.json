@@ -11,6 +11,7 @@
     "redux",
     "redux-router"
   ],
+  "repository": "https://github.com/oviava/react-playground.git",
   "author": "Ovidiu Avasilcai - ovidiu.ava@gmail.com",
   "license": "MIT",
   "dependencies": {
@@ -39,5 +40,5 @@
     "url-loader": "^0.5.6",
     "webpack": "^1.12.2",
     "webpack-dev-server": "^1.12.0"
-  },
+  }
 }
