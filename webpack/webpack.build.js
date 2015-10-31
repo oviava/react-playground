@@ -6,7 +6,9 @@ module.exports = {
   context: path.join(__dirname,'..','src'),
   entry: {
     index: './index.js',
-    vendors: ['react','redux']
+    vendors: ['history','react','redux','react-dom',
+    'react-router','react-redux','redux-router','redux-thunk',
+    'redux-devtools','redux-devtools-dock-monitor','redux-devtools-log-monitor']
   },
   output: {
     path: path.join(__dirname,'..', 'dist'),
@@ -24,7 +26,7 @@ module.exports = {
   module: {
     loaders: [{
       test: /\.js$/,
-      loaders: ['react-hot', 'babel'],
+      loaders: ['babel'],
       exclude : /node_modules/,
       include: path.join(__dirname,'..','src')
     },
