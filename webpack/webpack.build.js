@@ -1,5 +1,7 @@
 var path = require('path');
 var webpack = require('webpack');
+var purify = require('purify-css');
+var WebpackOnBuildPlugin = require('on-build-webpack');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
@@ -21,7 +23,10 @@ module.exports = {
     }),
     new ExtractTextPlugin('../dist/style.css'),
     new webpack.optimize.CommonsChunkPlugin("vendors","vendors.js"),
-    new webpack.optimize.UglifyJsPlugin({minimize: true})
+    new webpack.optimize.UglifyJsPlugin({minimize: true}),
+    new WebpackOnBuildPlugin(function(){
+      purify(['./dist/index.html','./dist/index.js'],['./dist/style.css'],{minify: true, output: './dist/style.css'});
+    })
   ],
   module: {
     loaders: [{

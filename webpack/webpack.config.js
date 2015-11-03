@@ -1,6 +1,13 @@
 var path = require('path');
 var webpack = require('webpack');
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var node_modules = path.resolve(__dirname,'node_modules');
+var resolvePaths = {
+  react: path.resolve(node_modules, 'react/dist/react.min.js'),
+  react_dom: path.resolve(node_modules, 'react-dom/dist/react-dom.min.js'),
+  redux: path.resolve(node_modules, 'redux/dist/redux-min.js'),
+  react_redux: path.resolve(node_modules, 'react-redux/dist/react-redux.min.js'),
+  redux_thunk: path.resolve(node_modules, 'redux-thunk/dist/redux-thunk.min.js')
+}
 
 module.exports = {
   context: path.join(__dirname,'..','src'),
@@ -13,10 +20,18 @@ module.exports = {
     ],
     vendors: [
       'history','react','redux','react-dom',
-      'react-router','react-redux','redux-router','redux-thunk', 'react-remarkable',
+      'react-router','react-redux','redux-router','redux-thunk',
       'redux-devtools','redux-devtools-dock-monitor','redux-devtools-log-monitor'
     ]
   },
+  resolve: {
+    alias: {
+    'react': resolvePaths.react,
+    'react-dom': resolvePaths.react_dom,
+    'redux': resolvePaths.redux,
+    'react-redux': resolvePaths.react_redux,
+    'redux-thunk': resolvePaths.redux_thunk
+  }},
   output: {
     path: path.join(__dirname,'..', 'dist'),
     filename: '[name].js',
