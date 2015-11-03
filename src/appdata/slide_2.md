@@ -1,2 +1,0 @@
-class: center, middle
-# MVC

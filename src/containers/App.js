@@ -1,5 +1,4 @@
 import React, {Component, PropTypes} from 'react';
-import Slides from '../components/Slides';
 
 // CSS
 import 'app.css';
@@ -12,7 +11,7 @@ class App extends Component {
 
   render() {
     return (
-      <Slides/>
+      <div>Hello World!</div>
     );
   }
 }
