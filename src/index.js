@@ -4,7 +4,7 @@ import {Provider} from 'react-redux';
 import {Route} from 'react-router';
 import {ReduxRouter} from 'redux-router';
 
-// DEVTOOLS
+// DEVTOOLS -- remove in prod
 import DevTools from './dev/DevTools';
 
 // Store

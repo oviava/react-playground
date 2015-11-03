@@ -22,7 +22,6 @@ module.exports = {
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
-    new ExtractTextPlugin('../dist/style.css'),
     new webpack.optimize.CommonsChunkPlugin("vendors","vendors.js")
   ],
   module: {
@@ -34,9 +33,9 @@ module.exports = {
     },
     {
       test: /\.css$/,
-      loader: ExtractTextPlugin.extract('style-loader','css-loader'),
+      loader: 'style!css',
     },
-    { test: /\.(png|woff|woff2|eot|ttf|svg)$/, loader: 'url-loader?limit=200000' }
+    { test: /\.(png|woff|woff2|eot|ttf|svg)$/, loader: 'file-loader?name=[name].[ext]' }
     ]
   },
   resolve: {

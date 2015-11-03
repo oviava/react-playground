@@ -3,7 +3,7 @@ import thunkMiddleware from 'redux-thunk';
 import createHashHistory from 'history/lib/createHashHistory';
 import {reduxReactRouter} from 'redux-router';
 
-// TODO: remove devtools and logging middleware in prod
+// TODO: remove devtools in prod
 import DevTools from '../dev/DevTools';
 
 import rootReducer from '../reducers';
