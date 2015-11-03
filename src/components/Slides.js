@@ -26,9 +26,7 @@ class Slides extends Component {
   render() {
     const {slideIndex} = this.props;
     return (
-      <div className="container">
         <Slide index={slideIndex} />
-      </div>
     );
   }
 }

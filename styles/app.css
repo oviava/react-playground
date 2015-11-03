@@ -597,6 +597,7 @@ pre code {
   margin-left: auto;
   padding-left: 15px;
   padding-right: 15px;
+  background-color: #fff;
 }
 @media (min-width: 768px) {
   .container {
@@ -618,6 +619,7 @@ pre code {
   margin-left: auto;
   padding-left: 15px;
   padding-right: 15px;
+  background-color: #fff;
 }
 .row {
   margin-left: -15px;
@@ -6696,7 +6698,6 @@ body {
 }
 body {
   font-weight: 400;
-  padding-bottom: 110px;
   -webkit-animation-name: fadeIn;
   animation-name: fadeIn;
   -webkit-animation-duration: 1000ms;
@@ -10996,5 +10997,29 @@ body.login-content:before {
     -ms-transform: rotate(360deg);
     -o-transform: rotate(360deg);
     transform: rotate(360deg);
+  }
+}
+
+.slidebox {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  background-color: #fff;
+  height: 85vh;
+}
+@media (min-width: 768px) {
+  .slidebox {
+    width: calc(100% - 30px);
+  }
+}
+@media (min-width: 992px) {
+  .slidebox {
+    width: calc(100% - 30px);
+  }
+}
+@media (min-width: 1200px) {
+  .slidebox {
+    width: 1170px;
   }
 }

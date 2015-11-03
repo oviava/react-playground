@@ -1,18 +1,13 @@
 import React from 'react';
 import Remarkable from 'react-remarkable';
 
-export const dataV1 = [
+const dataV1 = [
   <Remarkable>
-    class: center, middle
-    # Frontend Development with FLUX Pattern and ReactJS
+    # Title 1
   </Remarkable>,
   <Remarkable>
-    class: center, middle
-    # MVC
+    # Title 2
   </Remarkable>,
 ];
 
-export const dataV2 = [
-  <Remarkable source="./slide_1.md" />,
-  <Remarkable source="./slide_2.md" />,
-];
+export default dataV1;
