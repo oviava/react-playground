@@ -11,9 +11,11 @@ module.exports = {
       'webpack/hot/only-dev-server',
       './index.js'
     ],
-    vendors: ['history','react','redux','react-dom',
-    'react-router','react-redux','redux-router','redux-thunk',
-    'redux-devtools','redux-devtools-dock-monitor','redux-devtools-log-monitor']
+    vendors: [
+      'history','react','redux','react-dom',
+      'react-router','react-redux','redux-router','redux-thunk',
+      'redux-devtools','redux-devtools-dock-monitor','redux-devtools-log-monitor'
+    ]
   },
   output: {
     path: path.join(__dirname,'..', 'dist'),

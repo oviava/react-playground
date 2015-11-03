@@ -5,7 +5,9 @@ var config = require('./webpack/webpack.config');
 var wds = new WebpackDevServer(webpack(config), {
   publicPath: config.output.publicPath,
   hot: true,
-  historyApiFallback: true
+  historyApiFallback: true,
+  stats: {colors: true},
+  inline: true
 });
 
 wds.listen(3000, 'localhost', function (err, result) {
